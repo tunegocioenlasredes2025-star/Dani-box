@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danibox — Escuela de Boxeo en Castelar | Club Castelar, Morón</title>
+<meta name="description" content="Escuela de boxeo en Castelar con 25 años de trayectoria, dentro del Club Castelar. Clases para todas las edades, equipo femenino y masculino, boxeo recreativo y competitivo. Av. Zeballos 2650.">
+<meta name="theme-color" content="#0e1116">
+<link rel="canonical" href="https://dani-box.vercel.app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="geo.region" content="AR-B">
+<meta name="geo.placename" content="Castelar, Morón, Buenos Aires">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Danibox — Escuela de Boxeo">
+<meta property="og:title" content="Danibox — Escuela de Boxeo en Castelar">
+<meta property="og:description" content="25 años enseñando boxeo en el Club Castelar. Recreativo, competitivo, equipo femenino y masculino. Todas las edades.">
+<meta property="og:url" content="https://dani-box.vercel.app/">
+<meta property="og:image" content="https://dani-box.vercel.app/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="/assets/fotos/ring.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Ir al contenido</a>
+
+<!-- barra de datos -->
+<div class="tira" id="tira">
+  <div class="contenedor tira__in">
+    <span class="tira__item tira__dir">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
+      Av. Zeballos 2650, Castelar — Club Castelar
+    </span>
+    <span class="tira__item" id="estado" hidden></span>
+    <a class="tira__item tira__tel" href="tel:+541162575186">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2Z"/></svg>
+      011 6257-5186
+    </a>
+  </div>
+</div>
+
+<!-- header -->
+<header class="cab" id="cab">
+  <div class="contenedor cab__in">
+    <a class="marca" href="#inicio" aria-label="Danibox, inicio">
+      <img src="/assets/logo.png" alt="Escudo de la Escuela de Boxeo Dani Box" width="56" height="56" loading="eager">
+      <span class="marca__txt">
+        <strong>Danibox</strong>
+        <em>Escuela de Boxeo</em>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#escuela">La escuela</a>
+      <a href="#clases">Clases</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#profe">El profe</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+      <a class="nav__wa" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Quiero%20info%20para%20empezar%20a%20entrenar%20boxeo%20en%20Danibox." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- hero -->
+<section class="hero" id="inicio">
+  <picture class="hero__foto">
+    <source media="(max-width:700px)" srcset="/assets/fotos/ring-800.webp">
+    <img src="/assets/fotos/ring.webp" alt="Ring de boxeo de Danibox en el Club Castelar" width="1400" height="2489" fetchpriority="high">
+  </picture>
+  <div class="hero__velo"></div>
+
+  <div class="contenedor hero__in">
+    <img class="hero__logo" src="/assets/logo.png" alt="" width="132" height="132">
+    <p class="cintillo">Club Castelar · Castelar, Morón</p>
+    <h1>Acá se aprende a boxear<br><span>y a bancar al de al lado</span></h1>
+    <p class="hero__bajada">
+      25 años enseñando boxeo en el mismo lugar. Equipo femenino y masculino, de principiantes
+      que nunca se pusieron un guante a chicos que compiten con licencia.
+    </p>
+    <div class="hero__ctas">
+      <a class="btn btn--wa" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Quiero%20probar%20una%20clase%20de%20boxeo%20en%20Danibox.%20%C2%BFC%C3%B3mo%20hago%20para%20arrancar%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3A13 13 0 0 0 4.6 22.4L3 29l6.8-1.8A13 13 0 1 0 16 3Zm7.6 18.4c-.3.9-1.8 1.7-2.5 1.8-.7.1-1.5.1-2.5-.2-.6-.2-1.3-.4-2.2-.8-3.9-1.7-6.4-5.6-6.6-5.9-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.4-.4.8-.5 1-.5h.8c.3 0 .6 0 .9.7l1.2 2.9c.1.2.2.5 0 .8l-.5.7-.5.5c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.8.4.2.6.2.8-.1l1.2-1.4c.3-.3.5-.3.8-.2l2.8 1.3c.3.2.6.3.7.4.1.3.1 1-.1 1.9Z"/></svg>
+        Quiero probar una clase
+      </a>
+      <a class="btn btn--linea" href="#horarios">Ver días y horarios</a>
+    </div>
+  </div>
+
+  <ul class="credenciales">
+    <li><b>25</b><span>años enseñando</span></li>
+    <li><b>4,4★</b><span>en Google</span></li>
+    <li><b>+100</b><span>alumnos por semana</span></li>
+    <li><b>8 a 70</b><span>años entrenando</span></li>
+  </ul>
+</section>
+
+<!-- la escuela -->
+<section class="seccion seccion--crema" id="escuela">
+  <div class="contenedor dos">
+    <div class="dos__txt">
+      <p class="etiqueta">La escuela</p>
+      <h2>No es un gimnasio de moda. Es una escuela de barrio, y se nota.</h2>
+      <p>
+        Danibox funciona adentro del Club Castelar, un club de más de 100 años. Se entrena en un ring
+        de verdad, con bolsas, sogas y guantes, no con una clase filmada para redes.
+      </p>
+      <p>
+        Al que viene por primera vez no lo mandan a pelear: aprende a pararse, a moverse, a cuidar la
+        guardia y a respirar. Cada uno va a su ritmo y nadie se queda solo en un rincón.
+      </p>
+      <p class="firma">
+        “Este gimnasio es distinto: no solo te enseñan a pelear, también a ser solidario,
+        compañero, a soñar en grande.”
+        <span>— comentario de un alumno en Instagram</span>
+      </p>
+    </div>
+    <div class="dos__fotos">
+      <img src="/assets/fotos/equipo-gimnasio.webp" alt="Grupo de alumnos y alumnas de Danibox en el ring del Club Castelar" width="1156" height="868" loading="lazy">
+      <img class="dos__chica" src="/assets/fotos/entrenamiento-cancha.webp" alt="Clase de Danibox entrenando en la cancha del club" width="640" height="486" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- clases -->
+<section class="seccion" id="clases">
+  <div class="contenedor">
+    <p class="etiqueta etiqueta--centro">Cómo se entrena</p>
+    <h2 class="centro">Tres formas de estar en Danibox</h2>
+    <p class="centro sub">Se arranca por donde uno quiera. Se puede cambiar de camino en cualquier momento.</p>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 9h2.2a3 3 0 0 1 3 3v.6h5.6V12a3 3 0 0 1 3-3H20v6h-2.2a3 3 0 0 1-3-3v-.6H9.2v.6a3 3 0 0 1-3 3H4Z"/></svg>
+        </div>
+        <h3>Boxeo recreativo</h3>
+        <p>
+          Para ponerte en movimiento, bajar el estrés y aprender técnica de verdad. Entrada en calor,
+          soga, bolsa, guanteo con el profe y trabajo físico. Sin obligación de subir al ring nunca.
+        </p>
+        <ul class="tilde">
+          <li>Desde cero, sin experiencia previa</li>
+          <li>Todas las edades y estados físicos</li>
+          <li>Grupos mixtos</li>
+        </ul>
+      </article>
+
+      <article class="card card--destacada">
+        <div class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2 9.6 8.4 3 9.3l4.8 4.4L6.5 21 12 17.6 17.5 21l-1.3-7.3L21 9.3l-6.6-.9Z"/></svg>
+        </div>
+        <h3>Competitivo y exhibiciones</h3>
+        <p>
+          El que quiere competir tiene camino: primero exhibiciones en el club para perder el miedo
+          al público, después la licencia de la Federación Argentina de Box y los torneos afuera.
+        </p>
+        <ul class="tilde">
+          <li>Exhibiciones propias en el Club Castelar</li>
+          <li>Torneos en Merlo, Marcos Paz, Morón, Muñiz</li>
+          <li>Acompañamiento para sacar la licencia</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm-7 18v-1.6C5 16.4 8.1 15 12 15s7 1.4 7 4.4V21Z"/></svg>
+        </div>
+        <h3>Equipo femenino y juveniles</h3>
+        <p>
+          El equipo es femenino y masculino desde siempre, y hay chicos y chicas entrenando junto a
+          adultos. El boxeo les da rutina, disciplina y un lugar donde los esperan.
+        </p>
+        <ul class="tilde">
+          <li>Mujeres entrenando y compitiendo</li>
+          <li>Adolescentes y juveniles</li>
+          <li>Mismo ring, mismo grupo</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- horarios -->
+<section class="seccion seccion--oscura" id="horarios">
+  <div class="contenedor dos dos--invertida">
+    <div class="dos__txt">
+      <p class="etiqueta">Días y horarios</p>
+      <h2>El gimnasio abre así</h2>
+      <p>
+        Estos son los horarios de apertura publicados en Google. Antes de venir por primera vez,
+        escribinos por WhatsApp y te decimos el turno que mejor te queda según tu nivel.
+      </p>
+      <a class="btn btn--wa" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Quer%C3%ADa%20saber%20en%20qu%C3%A9%20horario%20me%20conviene%20arrancar." target="_blank" rel="noopener">Consultar mi horario</a>
+    </div>
+
+    <table class="horarios">
+      <caption class="visualmente-oculto">Horarios de Danibox</caption>
+      <tbody>
+        <tr data-dia="1"><th scope="row">Lunes</th><td>8:00 a 22:00</td></tr>
+        <tr data-dia="2"><th scope="row">Martes</th><td>18:00 a 21:00</td></tr>
+        <tr data-dia="3"><th scope="row">Miércoles</th><td>8:00 a 22:00</td></tr>
+        <tr data-dia="4"><th scope="row">Jueves</th><td>18:00 a 21:00</td></tr>
+        <tr data-dia="5"><th scope="row">Viernes</th><td>8:00 a 22:00</td></tr>
+        <tr data-dia="6"><th scope="row">Sábado</th><td class="cerrado">Cerrado</td></tr>
+        <tr data-dia="0"><th scope="row">Domingo</th><td class="cerrado">Cerrado</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- el profe -->
+<section class="seccion seccion--crema" id="profe">
+  <div class="contenedor dos">
+    <div class="dos__fotos dos__fotos--profe">
+      <img src="/assets/fotos/grupo-mural.webp" alt="Dani con el grupo frente al mural de los 100 años del Club Castelar" width="640" height="640" loading="lazy">
+      <img class="dos__chica" src="/assets/fotos/carrera-club.webp" alt="Alumnos de Danibox en la carrera aniversario del Club Castelar" width="1065" height="773" loading="lazy">
+    </div>
+    <div class="dos__txt">
+      <p class="etiqueta">El profe</p>
+      <h2>Dani Zamorano</h2>
+      <p>
+        Dani lleva 25 años enseñando boxeo y es la cara de la escuela: da las clases, arma las
+        exhibiciones, viaja con el equipo a los torneos y conoce a cada alumno por su nombre.
+      </p>
+      <p>
+        Su idea del boxeo no empieza ni termina arriba del ring: respeto, disciplina, cuidarse,
+        entrenar aunque no haya ganas y bancar al compañero. Por eso hay alumnos que hace años que
+        vienen, y otros que volvieron después de mucho tiempo.
+      </p>
+      <p class="firma">
+        “Dani es un excelente profesional, comprometido con sus alumnos y con la comunidad.”
+        <span>— Carla Donato, opinión en Google</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- testimonios -->
+<section class="seccion" id="opiniones">
+  <div class="contenedor">
+    <p class="etiqueta etiqueta--centro">Los que entrenan acá</p>
+    <h2 class="centro">4,4 ★ en Google y una tribuna en Instagram</h2>
+
+    <div class="opiniones">
+      <blockquote>
+        <p>“Hace 3 años que entreno en Danibox del Club Castelar y somos una gran familia.”</p>
+        <cite>Carla Donato <span>· Google</span></cite>
+      </blockquote>
+      <blockquote>
+        <p>“El mejor lugar de Castelar para practicar deporte y aprender técnica de boxeo, en un clima de buena onda siempre, apto para gente de todas las edades.”</p>
+        <cite>Mariano Maisto <span>· Google</span></cite>
+      </blockquote>
+      <blockquote>
+        <p>“Enseña box, pero también educa e inculca valores para la vida. El mejor gimnasio de box sin dudas.”</p>
+        <cite>Alumno <span>· Instagram</span></cite>
+      </blockquote>
+    </div>
+    <p class="centro nota">
+      Opiniones publicadas por alumnos en Google Maps e Instagram.
+      <a href="https://www.google.com/maps/search/DANIBOX+Zeballos+2650+Castelar" target="_blank" rel="noopener">Ver la ficha en Google</a>
+    </p>
+  </div>
+</section>
+
+<!-- galeria -->
+<section class="seccion seccion--oscura" id="galeria">
+  <div class="contenedor">
+    <p class="etiqueta etiqueta--centro">Galería</p>
+    <h2 class="centro">Así se ve un día cualquiera</h2>
+    <div class="galeria">
+      <figure class="g1"><img src="/assets/fotos/sparring.webp" alt="Dos alumnos guanteando con cabezal en el ring" width="1600" height="900" loading="lazy"></figure>
+      <figure class="g2"><img src="/assets/fotos/ring-clase.webp" alt="Clase entrenando dentro del ring" width="360" height="525" loading="lazy"></figure>
+      <figure class="g3"><img src="/assets/fotos/bolsas.webp" alt="Alumnos trabajando en las bolsas" width="361" height="525" loading="lazy"></figure>
+      <figure class="g4"><img src="/assets/fotos/evento.webp" alt="Equipo de Danibox en un evento de boxeo" width="640" height="480" loading="lazy"></figure>
+      <figure class="g5"><img src="/assets/fotos/torneo.webp" alt="Alumnos de Danibox en un torneo" width="361" height="640" loading="lazy"></figure>
+    </div>
+    <p class="centro nota"><a href="https://www.instagram.com/boxeo.danibox/" target="_blank" rel="noopener">Ver más en @boxeo.danibox</a></p>
+  </div>
+</section>
+
+<!-- como empezar -->
+<section class="seccion seccion--crema" id="empezar">
+  <div class="contenedor">
+    <p class="etiqueta etiqueta--centro">Cómo empezar</p>
+    <h2 class="centro">Tres pasos y estás entrenando</h2>
+    <ol class="pasos">
+      <li>
+        <span class="pasos__n">1</span>
+        <h3>Escribí por WhatsApp</h3>
+        <p>Contanos tu edad, si hiciste algo de deporte antes y qué días te quedan bien. Te contestamos el horario que te conviene.</p>
+      </li>
+      <li>
+        <span class="pasos__n">2</span>
+        <h3>Vení a probar</h3>
+        <p>Con ropa cómoda, zapatillas y una botella de agua alcanza. Los guantes para la primera clase te los prestamos.</p>
+      </li>
+      <li>
+        <span class="pasos__n">3</span>
+        <h3>Entrená con el grupo</h3>
+        <p>Si te gustó, arrancás. De ahí en más el camino lo elegís vos: entrenar por salud o prepararte para competir.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- faq -->
+<section class="seccion" id="faq">
+  <div class="contenedor contenedor--angosto">
+    <p class="etiqueta etiqueta--centro">Preguntas</p>
+    <h2 class="centro">Lo que todos preguntan antes de venir</h2>
+
+    <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
+      <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <summary itemprop="name">¿Necesito experiencia para empezar?</summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">No. La mayoría llega sin haberse puesto nunca un guante. Se empieza por la postura, el movimiento y la guardia, y recién después se golpea la bolsa.</p>
+        </div>
+      </details>
+      <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <summary itemprop="name">¿Hay que pelear?</summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">No. La mayor parte del grupo entrena de forma recreativa y nunca compite. Competir es una opción para el que la busca, y se prepara con tiempo.</p>
+        </div>
+      </details>
+      <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <summary itemprop="name">¿Desde qué edad se puede entrenar?</summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Entrenan chicos, adolescentes y adultos, y el equipo es femenino y masculino. Escribinos por WhatsApp con la edad y te decimos en qué grupo entra.</p>
+        </div>
+      </details>
+      <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <summary itemprop="name">¿Qué tengo que llevar a la primera clase?</summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ropa cómoda, zapatillas, toalla y agua. Los guantes para probar te los prestamos; después cada uno se compra los suyos y las vendas.</p>
+        </div>
+      </details>
+      <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <summary itemprop="name">¿Dónde queda y cómo llego?</summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">En el Club Castelar, Av. Zeballos 2650, Castelar, partido de Morón. A pocas cuadras de la estación de Castelar del tren Sarmiento.</p>
+        </div>
+      </details>
+      <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <summary itemprop="name">¿Cuánto sale la cuota?</summary>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">La cuota se consulta por WhatsApp al 011 6257-5186, porque cambia según la cantidad de días por semana.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- contacto -->
+<section class="seccion seccion--oscura" id="contacto">
+  <div class="contenedor dos dos--contacto">
+    <div class="dos__txt">
+      <p class="etiqueta">Contacto</p>
+      <h2>Vení a conocer el gimnasio</h2>
+      <ul class="datos">
+        <li>
+          <span>Dirección</span>
+          <a href="https://www.google.com/maps/search/DANIBOX+Zeballos+2650+Castelar" target="_blank" rel="noopener">Av. Zeballos 2650, Castelar<br>Club Castelar — Partido de Morón</a>
+        </li>
+        <li>
+          <span>Teléfono / WhatsApp</span>
+          <a href="tel:+541162575186">011 6257-5186</a>
+        </li>
+        <li>
+          <span>Instagram</span>
+          <a href="https://www.instagram.com/boxeo.danibox/" target="_blank" rel="noopener">@boxeo.danibox</a>
+        </li>
+        <li>
+          <span>Horarios</span>
+          Lun, Mié y Vie de 8 a 22 · Mar y Jue de 18 a 21
+        </li>
+      </ul>
+      <a class="btn btn--wa" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Vi%20la%20web%20y%20quiero%20sumarme%20a%20entrenar." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+
+    <div class="mapa">
+      <iframe
+        title="Mapa de Danibox en Av. Zeballos 2650, Castelar"
+        src="https://www.google.com/maps?q=Av.+Zeballos+2650,+Castelar,+Buenos+Aires&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__in">
+    <div class="pie__marca">
+      <img src="/assets/logo.png" alt="" width="64" height="64" loading="lazy">
+      <p><strong>Danibox</strong><br>Escuela de Boxeo · Club Castelar</p>
+    </div>
+    <nav class="pie__nav" aria-label="Pie">
+      <a href="#escuela">La escuela</a>
+      <a href="#clases">Clases</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <p class="pie__legal">
+      Av. Zeballos 2650, Castelar, Morón · 011 6257-5186<br>
+      <span id="anio"></span> Danibox — Escuela de Boxeo.
+    </p>
+  </div>
+</footer>
+
+<a class="wa-flotante" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Quiero%20info%20para%20entrenar%20boxeo%20en%20Danibox." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3A13 13 0 0 0 4.6 22.4L3 29l6.8-1.8A13 13 0 1 0 16 3Zm7.6 18.4c-.3.9-1.8 1.7-2.5 1.8-.7.1-1.5.1-2.5-.2-.6-.2-1.3-.4-2.2-.8-3.9-1.7-6.4-5.6-6.6-5.9-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.4-.4.8-.5 1-.5h.8c.3 0 .6 0 .9.7l1.2 2.9c.1.2.2.5 0 .8l-.5.7-.5.5c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.8.4.2.6.2.8-.1l1.2-1.4c.3-.3.5-.3.8-.2l2.8 1.3c.3.2.6.3.7.4.1.3.1 1-.1 1.9Z"/></svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "@id": "https://dani-box.vercel.app/#danibox",
+  "name": "Danibox — Escuela de Boxeo",
+  "alternateName": "Escuela de Boxeo Dani Box",
+  "description": "Escuela de boxeo con 25 años de trayectoria dentro del Club Castelar. Boxeo recreativo y competitivo para todas las edades, equipo femenino y masculino.",
+  "url": "https://dani-box.vercel.app/",
+  "image": "https://dani-box.vercel.app/assets/og.jpg",
+  "logo": "https://dani-box.vercel.app/assets/logo.png",
+  "telephone": "+54 11 6257-5186",
+  "sameAs": ["https://www.instagram.com/boxeo.danibox/"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Zeballos 2650",
+    "addressLocality": "Castelar",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "B1712",
+    "addressCountry": "AR"
+  },
+  "areaServed": ["Castelar", "Morón", "Ituzaingó", "Haedo", "Villa Tesei", "Zona Oeste del GBA"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "08:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday"], "opens": "18:00", "closes": "21:00" }
+  ],
+  "sport": "Boxeo",
+  "founder": { "@type": "Person", "name": "Daniel Zamorano" }
+}
+</script>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>
