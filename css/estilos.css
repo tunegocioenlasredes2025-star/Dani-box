@@ -31,6 +31,8 @@
 
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+/* que el titulo no quede tapado por el header fijo al entrar por el menu */
+section[id]{scroll-margin-top:84px}
 body{
   margin:0;
   background:var(--crema);
@@ -234,6 +236,11 @@ p{margin:0 0 1.1em}
 .horarios th,.horarios td{padding:.85rem .2rem;border-bottom:1px solid rgba(255,255,255,.12);text-align:left}
 .horarios th{font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#fff}
 .horarios td{text-align:right;color:#c3ccdb;font-variant-numeric:tabular-nums}
+.horarios td span{
+  display:inline-block;margin:.12rem 0 .12rem .35rem;padding:.16rem .5rem;
+  border:1px solid rgba(255,255,255,.16);border-radius:2px;font-size:.98rem;
+}
+.horarios tr.hoy td span{border-color:rgba(255,255,255,.4);color:#fff}
 .horarios .cerrado{color:#8b94a5}
 .horarios tr.hoy th,.horarios tr.hoy td{color:#fff;font-weight:700}
 .horarios tr.hoy th::after{
@@ -264,6 +271,13 @@ p{margin:0 0 1.1em}
 .galeria img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;transition:transform .5s ease}
 .galeria figure:hover img{transform:scale(1.05)}
 .galeria .g1{grid-column:span 2;aspect-ratio:16/9}
+.galeria .video{position:relative;background:#000}
+.galeria video{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/9}
+.galeria figcaption{
+  position:absolute;left:.6rem;bottom:.6rem;
+  font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;
+  background:rgba(9,12,18,.72);color:#fff;padding:.3rem .6rem;border-radius:2px;
+}
 .galeria .g1 img{aspect-ratio:16/9}
 
 /* ---------- pasos ---------- */
@@ -351,10 +365,10 @@ p{margin:0 0 1.1em}
   .pasos{grid-template-columns:repeat(3,1fr)}
   .galeria{grid-template-columns:repeat(4,1fr)}
   .galeria .g1{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-  .galeria .g1 img{aspect-ratio:1}
+  .galeria .g1 img,.galeria .g1 video{aspect-ratio:1}
   .dos{grid-template-columns:1fr 1fr;align-items:center;gap:3.4rem}
   .dos__fotos{grid-template-columns:1fr 1fr}
-  .dos__fotos img:first-child{grid-column:span 2;aspect-ratio:16/10}
+  .dos__fotos img:first-child{grid-column:span 2;aspect-ratio:4/3}
   .dos__fotos--profe img:first-child{grid-column:span 2;aspect-ratio:4/3}
   .pie__in{grid-template-columns:auto 1fr auto;text-align:left;align-items:center;justify-items:start}
   .pie__nav{justify-content:center}

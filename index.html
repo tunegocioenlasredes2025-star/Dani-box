@@ -28,7 +28,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="/assets/fotos/ring.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/fotos/ring-sparring.webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/estilos.css">
 </head>
@@ -83,8 +83,8 @@
 <!-- hero -->
 <section class="hero" id="inicio">
   <picture class="hero__foto">
-    <source media="(max-width:700px)" srcset="/assets/fotos/ring-800.webp">
-    <img src="/assets/fotos/ring.webp" alt="Ring de boxeo de Danibox en el Club Castelar" width="1400" height="2489" fetchpriority="high">
+    <source media="(max-width:700px)" srcset="/assets/fotos/ring-sparring-800.webp">
+    <img src="/assets/fotos/ring-sparring.webp" alt="Dos alumnos guanteando con cabezal en el ring de Danibox" width="1400" height="1867" fetchpriority="high">
   </picture>
   <div class="hero__velo"></div>
 
@@ -108,8 +108,8 @@
   <ul class="credenciales">
     <li><b>25</b><span>años enseñando</span></li>
     <li><b>4,4★</b><span>en Google</span></li>
-    <li><b>+100</b><span>alumnos por semana</span></li>
-    <li><b>8 a 70</b><span>años entrenando</span></li>
+    <li><b>16</b><span>clases por semana</span></li>
+    <li><b>Todas</b><span>las edades</span></li>
   </ul>
 </section>
 
@@ -134,8 +134,8 @@
       </p>
     </div>
     <div class="dos__fotos">
-      <img src="/assets/fotos/equipo-gimnasio.webp" alt="Grupo de alumnos y alumnas de Danibox en el ring del Club Castelar" width="1156" height="868" loading="lazy">
-      <img class="dos__chica" src="/assets/fotos/entrenamiento-cancha.webp" alt="Clase de Danibox entrenando en la cancha del club" width="640" height="486" loading="lazy">
+      <img src="/assets/fotos/cancha-grupo.webp" alt="Clase de Danibox entrenando en la cancha del Club Castelar" width="1400" height="1867" loading="lazy">
+      <img class="dos__chica" src="/assets/fotos/grupo-charla.webp" alt="Alumnos de Danibox charlando durante el descanso" width="1200" height="1600" loading="lazy">
     </div>
   </div>
 </section>
@@ -175,7 +175,7 @@
         </p>
         <ul class="tilde">
           <li>Exhibiciones propias en el Club Castelar</li>
-          <li>Torneos en Merlo, Marcos Paz, Morón, Muñiz</li>
+          <li>Torneos y exhibiciones fuera del club</li>
           <li>Acompañamiento para sacar la licencia</li>
         </ul>
       </article>
@@ -204,24 +204,28 @@
   <div class="contenedor dos dos--invertida">
     <div class="dos__txt">
       <p class="etiqueta">Días y horarios</p>
-      <h2>El gimnasio abre así</h2>
+      <h2>Elegí tu turno</h2>
       <p>
-        Estos son los horarios de apertura publicados en Google. Antes de venir por primera vez,
-        escribinos por WhatsApp y te decimos el turno que mejor te queda según tu nivel.
+        Cada turno dura una hora y media. Si no sabés cuál te conviene, escribinos por WhatsApp:
+        con tu edad y tu experiencia te decimos en qué grupo entrás mejor.
       </p>
-      <a class="btn btn--wa" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Quer%C3%ADa%20saber%20en%20qu%C3%A9%20horario%20me%20conviene%20arrancar." target="_blank" rel="noopener">Consultar mi horario</a>
+      <p class="firma">
+        “Hacé lo que debés, no lo que te provoca. La disciplina vale más que la motivación.”
+        <span>— escrito en el pizarrón del gimnasio</span>
+      </p>
+      <a class="btn btn--wa" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Quer%C3%ADa%20saber%20en%20qu%C3%A9%20turno%20me%20conviene%20arrancar." target="_blank" rel="noopener">Consultar mi turno</a>
     </div>
 
     <table class="horarios">
-      <caption class="visualmente-oculto">Horarios de Danibox</caption>
+      <caption class="visualmente-oculto">Turnos de Danibox</caption>
       <tbody>
-        <tr data-dia="1"><th scope="row">Lunes</th><td>8:00 a 22:00</td></tr>
-        <tr data-dia="2"><th scope="row">Martes</th><td>18:00 a 21:00</td></tr>
-        <tr data-dia="3"><th scope="row">Miércoles</th><td>8:00 a 22:00</td></tr>
-        <tr data-dia="4"><th scope="row">Jueves</th><td>18:00 a 21:00</td></tr>
-        <tr data-dia="5"><th scope="row">Viernes</th><td>8:00 a 22:00</td></tr>
-        <tr data-dia="6"><th scope="row">Sábado</th><td class="cerrado">Cerrado</td></tr>
-        <tr data-dia="0"><th scope="row">Domingo</th><td class="cerrado">Cerrado</td></tr>
+        <tr data-dia="1"><th scope="row">Lunes</th><td><span>08:00 a 09:30</span><span>16:00 a 17:30</span><span>17:30 a 19:00</span><span>19:00 a 20:30</span></td></tr>
+        <tr data-dia="2"><th scope="row">Martes</th><td><span>18:00 a 19:30</span><span>19:30 a 21:00</span></td></tr>
+        <tr data-dia="3"><th scope="row">Miércoles</th><td><span>08:00 a 09:30</span><span>16:00 a 17:30</span><span>17:30 a 19:00</span><span>19:00 a 20:30</span></td></tr>
+        <tr data-dia="4"><th scope="row">Jueves</th><td><span>18:00 a 19:30</span><span>19:30 a 21:00</span></td></tr>
+        <tr data-dia="5"><th scope="row">Viernes</th><td><span>08:00 a 09:30</span><span>16:00 a 17:30</span><span>17:30 a 19:00</span><span>19:00 a 20:30</span></td></tr>
+        <tr data-dia="6"><th scope="row">Sábado</th><td class="cerrado">Sin clases</td></tr>
+        <tr data-dia="0"><th scope="row">Domingo</th><td class="cerrado">Sin clases</td></tr>
       </tbody>
     </table>
   </div>
@@ -231,8 +235,8 @@
 <section class="seccion seccion--crema" id="profe">
   <div class="contenedor dos">
     <div class="dos__fotos dos__fotos--profe">
-      <img src="/assets/fotos/grupo-mural.webp" alt="Dani con el grupo frente al mural de los 100 años del Club Castelar" width="640" height="640" loading="lazy">
-      <img class="dos__chica" src="/assets/fotos/carrera-club.webp" alt="Alumnos de Danibox en la carrera aniversario del Club Castelar" width="1065" height="773" loading="lazy">
+      <img src="/assets/fotos/bolsas-grupo.webp" alt="Alumnos entrenando en las bolsas en el gimnasio de Danibox" width="1400" height="1867" loading="lazy">
+      <img class="dos__chica" src="/assets/fotos/profe.webp" alt="El profe de Danibox con el buzo de Boxeo de Barrio" width="361" height="525" loading="lazy">
     </div>
     <div class="dos__txt">
       <p class="etiqueta">El profe</p>
@@ -287,11 +291,16 @@
     <p class="etiqueta etiqueta--centro">Galería</p>
     <h2 class="centro">Así se ve un día cualquiera</h2>
     <div class="galeria">
-      <figure class="g1"><img src="/assets/fotos/sparring.webp" alt="Dos alumnos guanteando con cabezal en el ring" width="1600" height="900" loading="lazy"></figure>
-      <figure class="g2"><img src="/assets/fotos/ring-clase.webp" alt="Clase entrenando dentro del ring" width="360" height="525" loading="lazy"></figure>
-      <figure class="g3"><img src="/assets/fotos/bolsas.webp" alt="Alumnos trabajando en las bolsas" width="361" height="525" loading="lazy"></figure>
-      <figure class="g4"><img src="/assets/fotos/evento.webp" alt="Equipo de Danibox en un evento de boxeo" width="640" height="480" loading="lazy"></figure>
-      <figure class="g5"><img src="/assets/fotos/torneo.webp" alt="Alumnos de Danibox en un torneo" width="361" height="640" loading="lazy"></figure>
+      <figure class="g1 video">
+        <video id="clip" poster="/assets/video/clase-poster.webp" data-src="/assets/video/clase.mp4"
+               width="406" height="720" muted loop playsinline preload="none"
+               aria-label="Nueve segundos de una clase en Danibox: el profe corrigiendo la guardia"></video>
+        <figcaption>9 segundos de una clase</figcaption>
+      </figure>
+      <figure class="g2"><img src="/assets/fotos/correr.webp" alt="Alumno corriendo en la entrada en calor" width="1200" height="1600" loading="lazy"></figure>
+      <figure class="g3"><img src="/assets/fotos/pera.webp" alt="Trabajo de pera en el gimnasio" width="1200" height="1600" loading="lazy"></figure>
+      <figure class="g4"><img src="/assets/fotos/ring-cartel.webp" alt="El ring de Danibox con el cartel de la escuela" width="1400" height="1867" loading="lazy"></figure>
+      <figure class="g5"><img src="/assets/fotos/bolsa-pesada.webp" alt="Alumno trabajando en la bolsa pesada" width="1200" height="1600" loading="lazy"></figure>
     </div>
     <p class="centro nota"><a href="https://www.instagram.com/boxeo.danibox/" target="_blank" rel="noopener">Ver más en @boxeo.danibox</a></p>
   </div>
@@ -311,7 +320,7 @@
       <li>
         <span class="pasos__n">2</span>
         <h3>Vení a probar</h3>
-        <p>Con ropa cómoda, zapatillas y una botella de agua alcanza. Los guantes para la primera clase te los prestamos.</p>
+        <p>Con ropa cómoda, zapatillas y una botella de agua alcanza. Si no tenés guantes, avisanos antes y lo resolvemos.</p>
       </li>
       <li>
         <span class="pasos__n">3</span>
@@ -344,19 +353,19 @@
       <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <summary itemprop="name">¿Desde qué edad se puede entrenar?</summary>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Entrenan chicos, adolescentes y adultos, y el equipo es femenino y masculino. Escribinos por WhatsApp con la edad y te decimos en qué grupo entra.</p>
+          <p itemprop="text">Entrenan chicos, adolescentes y adultos, y el equipo es femenino y masculino. Escribinos por WhatsApp con la edad y te decimos en qué turno entra.</p>
         </div>
       </details>
       <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <summary itemprop="name">¿Qué tengo que llevar a la primera clase?</summary>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">Ropa cómoda, zapatillas, toalla y agua. Los guantes para probar te los prestamos; después cada uno se compra los suyos y las vendas.</p>
+          <p itemprop="text">Ropa cómoda, zapatillas, toalla y agua. Si todavía no tenés guantes, escribinos antes de venir y lo vemos; después cada uno se compra los suyos y las vendas.</p>
         </div>
       </details>
       <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <summary itemprop="name">¿Dónde queda y cómo llego?</summary>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">En el Club Castelar, Av. Zeballos 2650, Castelar, partido de Morón. A pocas cuadras de la estación de Castelar del tren Sarmiento.</p>
+          <p itemprop="text">En el Club Castelar, Av. Zeballos 2650, Castelar, partido de Morón.</p>
         </div>
       </details>
       <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -390,7 +399,7 @@
         </li>
         <li>
           <span>Horarios</span>
-          Lun, Mié y Vie de 8 a 22 · Mar y Jue de 18 a 21
+          Lun, Mié y Vie: 8:00 a 9:30 y 16:00 a 20:30<br>Mar y Jue: 18:00 a 21:00
         </li>
       </ul>
       <a class="btn btn--wa" href="https://wa.me/5491162575186?text=Hola%20Dani!%20Vi%20la%20web%20y%20quiero%20sumarme%20a%20entrenar." target="_blank" rel="noopener">Escribir por WhatsApp</a>
@@ -454,7 +463,8 @@
   },
   "areaServed": ["Castelar", "Morón", "Ituzaingó", "Haedo", "Villa Tesei", "Zona Oeste del GBA"],
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "08:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "08:00", "closes": "09:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "16:00", "closes": "20:30" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday"], "opens": "18:00", "closes": "21:00" }
   ],
   "sport": "Boxeo",

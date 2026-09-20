@@ -31,16 +31,24 @@
     });
   }
 
-  /* --- horario de hoy + abierto/cerrado --- */
-  var HORARIOS = {
-    0: null,            // domingo
-    1: [8, 22],
-    2: [18, 21],
-    3: [8, 22],
-    4: [18, 21],
-    5: [8, 22],
-    6: null             // sabado
+  /* --- turnos de clase + estado en vivo --- */
+  var MANANA_Y_TARDE = [[8, 9.5], [16, 17.5], [17.5, 19], [19, 20.5]];
+  var NOCHE = [[18, 19.5], [19.5, 21]];
+  var TURNOS = {
+    0: [],              // domingo
+    1: MANANA_Y_TARDE,
+    2: NOCHE,
+    3: MANANA_Y_TARDE,
+    4: NOCHE,
+    5: MANANA_Y_TARDE,
+    6: []               // sabado
   };
+
+  function hhmm(h) {
+    var hs = Math.floor(h);
+    var ms = Math.round((h - hs) * 60);
+    return hs + ':' + (ms < 10 ? '0' + ms : ms);
+  }
 
   function ahoraEnBuenosAires() {
     // el sitio se ve desde cualquier lado: fijamos el huso del gimnasio
@@ -64,28 +72,30 @@
 
   var estado = document.getElementById('estado');
   if (estado && typeof t.dia === 'number') {
-    var hoy = HORARIOS[t.dia];
-    var abierto = !!hoy && t.hora >= hoy[0] && t.hora < hoy[1];
-    if (abierto) {
-      estado.textContent = 'Abierto ahora · hasta las ' + hoy[1] + ':00';
+    var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+    var hoy = TURNOS[t.dia] || [];
+    var enCurso = null, siguienteHoy = null;
+
+    hoy.forEach(function (turno) {
+      if (t.hora >= turno[0] && t.hora < turno[1]) enCurso = turno;
+      else if (turno[0] > t.hora && !siguienteHoy) siguienteHoy = turno;
+    });
+
+    if (enCurso) {
+      estado.textContent = 'Clase en curso · termina ' + hhmm(enCurso[1]);
+      estado.className = 'tira__item abierto';
+    } else if (siguienteHoy) {
+      estado.textContent = 'Hoy hay clase a las ' + hhmm(siguienteHoy[0]);
       estado.className = 'tira__item abierto';
     } else {
-      var d = t.dia;
       var prox = null;
-      for (var i = 1; i <= 7; i++) {
-        var siguiente = HORARIOS[(d + i) % 7];
-        if (siguiente) {
-          prox = { nombre: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'][(d + i) % 7], hora: siguiente[0] };
-          break;
-        }
+      for (var i = 1; i <= 7 && !prox; i++) {
+        var dia = (t.dia + i) % 7;
+        if ((TURNOS[dia] || []).length) prox = { nombre: DIAS[dia], hora: TURNOS[dia][0][0] };
       }
-      if (hoy && t.hora < hoy[0]) {
-        estado.textContent = 'Cerrado · abre hoy ' + hoy[0] + ':00';
-      } else if (prox) {
-        estado.textContent = 'Cerrado · abre ' + prox.nombre + ' ' + prox.hora + ':00';
-      } else {
-        estado.textContent = 'Cerrado ahora';
-      }
+      estado.textContent = prox
+        ? 'Próxima clase: ' + prox.nombre + ' ' + hhmm(prox.hora)
+        : 'Sin clases hoy';
       estado.className = 'tira__item cerrado';
     }
     estado.hidden = false;
@@ -108,6 +118,22 @@
     setTimeout(function () {
       objetivos.forEach(function (el) { el.classList.add('visible'); });
     }, 6000);
+  }
+
+  /* --- el clip de la galeria: carga y arranca solo cuando se ve --- */
+  var clip = document.getElementById('clip');
+  if (clip && 'IntersectionObserver' in window) {
+    var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) {
+          if (!clip.src) clip.src = clip.dataset.src;
+          if (!quieto) { var pr = clip.play(); if (pr && pr.catch) pr.catch(function () {}); }
+        } else if (!clip.paused) {
+          clip.pause();
+        }
+      });
+    }, { threshold: 0.35 }).observe(clip);
   }
 
   /* --- año del pie --- */

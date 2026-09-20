@@ -25,11 +25,11 @@ insumos/              NO se publica (gitignored): análisis, fotos originales, s
 | Dirección | Av. Zeballos 2650, Castelar (Club Castelar), Morón |
 | Teléfono / WhatsApp | 011 6257-5186 → `wa.me/5491162575186` |
 | Instagram | [@boxeo.danibox](https://www.instagram.com/boxeo.danibox/) |
-| Horarios | Lun, Mié y Vie 8–22 · Mar y Jue 18–21 · Sáb y Dom cerrado |
+| Turnos | Lun, Mié y Vie 8–9:30, 16–17:30, 17:30–19 y 19–20:30 · Mar y Jue 18–19:30 y 19:30–21 |
 | Google | 4,4 ★ (7 opiniones) |
 
 Si cambia alguno, hay que tocarlo en **tres lugares**: el HTML visible, el bloque
-`application/ld+json` del final y —si es el horario— la constante `HORARIOS` de `js/main.js`.
+`application/ld+json` del final y —si es un turno— la constante `TURNOS` de `js/main.js`.
 
 ## Desarrollo local
 
@@ -42,7 +42,8 @@ Y abrir http://localhost:5195. (En Claude Code está como configuración `danibo
 
 ## Fotos
 
-Las fotos salen de Google Maps y del Instagram del cliente. `insumos/procesar-fotos.py`
+Las fotos son del cliente (entrenamiento del 20/09/2026, `insumos/cliente/`, HEIC del iPhone
+convertidos con pillow-heif). `insumos/procesar-fotos.py`
 las recorta, les aplica un tratamiento parejo (contraste + virado cálido para emparejar
 fotos de celular de distinta calidad) y las exporta a webp en dos tamaños.
 
