@@ -102,7 +102,7 @@
   }
 
   /* --- revelar al hacer scroll --- */
-  var objetivos = document.querySelectorAll('.seccion .dos, .cards > *, .opiniones > *, .pasos > *, .galeria figure, .faq, .horarios');
+  var objetivos = document.querySelectorAll('.seccion .dos, .cards > *, .videos > *, .opiniones > *, .pasos > *, .galeria figure, .faq, .horarios');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var io = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (e) {
@@ -135,6 +135,15 @@
       });
     }, { threshold: 0.35 }).observe(clip);
   }
+
+  /* --- un solo video con sonido a la vez --- */
+  var todos = document.querySelectorAll('video');
+  todos.forEach(function (v) {
+    v.addEventListener('play', function () {
+      if (v.muted) return;
+      todos.forEach(function (otro) { if (otro !== v && !otro.paused) otro.pause(); });
+    });
+  });
 
   /* --- año del pie --- */
   var anio = document.getElementById('anio');

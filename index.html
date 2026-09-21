@@ -235,8 +235,8 @@
 <section class="seccion seccion--crema" id="profe">
   <div class="contenedor dos">
     <div class="dos__fotos dos__fotos--profe">
-      <img src="/assets/fotos/bolsas-grupo.webp" alt="Alumnos entrenando en las bolsas en el gimnasio de Danibox" width="1400" height="1867" loading="lazy">
-      <img class="dos__chica" src="/assets/fotos/profe.webp" alt="El profe de Danibox con el buzo de Boxeo de Barrio" width="361" height="525" loading="lazy">
+      <img src="/assets/fotos/dani.webp" alt="Dani Zamorano con las manoplas, trabajando con un alumno" width="900" height="1600" loading="lazy">
+      <img class="dos__chica" src="/assets/fotos/bolsas-grupo.webp" alt="Alumnos entrenando en las bolsas en el gimnasio de Danibox" width="1400" height="1867" loading="lazy">
     </div>
     <div class="dos__txt">
       <p class="etiqueta">El profe</p>
@@ -254,6 +254,41 @@
         “Dani es un excelente profesional, comprometido con sus alumnos y con la comunidad.”
         <span>— Carla Donato, opinión en Google</span>
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- dani en video -->
+<section class="seccion seccion--oscura" id="videos">
+  <div class="contenedor">
+    <p class="etiqueta etiqueta--centro">Dani, en video</p>
+    <h2 class="centro">Adentro y afuera del ring</h2>
+    <p class="centro sub">Dos momentos del mismo entrenamiento. Subí el volumen.</p>
+
+    <div class="videos">
+      <figure class="video-card">
+        <video controls playsinline preload="none" width="540" height="960"
+               poster="/assets/video/clase-combinacion-poster.webp">
+          <source src="/assets/video/clase-combinacion.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          <strong>En la clase</strong>
+          Dani explica una combinación de tres golpes: esquivar, girar y salir con el recto de derecha.
+          <span>1:16</span>
+        </figcaption>
+      </figure>
+
+      <figure class="video-card">
+        <video controls playsinline preload="none" width="540" height="960"
+               poster="/assets/video/charla-alcohol-poster.webp">
+          <source src="/assets/video/charla-alcohol.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          <strong>Fuera del ring</strong>
+          Antes de entrenar, Dani le leyó al grupo un texto sobre el alcohol. En Danibox también se habla de esto.
+          <span>1:17</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -470,6 +505,31 @@
   "sport": "Boxeo",
   "founder": { "@type": "Person", "name": "Daniel Zamorano" }
 }
+</script>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Dani explica una combinación de tres golpes",
+    "description": "Clase en Danibox: esquivar, girar y salir con el recto de derecha.",
+    "thumbnailUrl": "https://dani-box.vercel.app/assets/video/clase-combinacion-poster.webp",
+    "contentUrl": "https://dani-box.vercel.app/assets/video/clase-combinacion.mp4",
+    "uploadDate": "2026-09-21",
+    "duration": "PT1M16S"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Fuera del ring: una charla sobre el alcohol en Danibox",
+    "description": "Antes de entrenar, Dani le lee al grupo un texto sobre el alcohol.",
+    "thumbnailUrl": "https://dani-box.vercel.app/assets/video/charla-alcohol-poster.webp",
+    "contentUrl": "https://dani-box.vercel.app/assets/video/charla-alcohol.mp4",
+    "uploadDate": "2026-09-21",
+    "duration": "PT1M17S"
+  }
+]
 </script>
 
 <script src="/js/main.js" defer></script>
