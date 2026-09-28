@@ -231,6 +231,21 @@ p{margin:0 0 1.1em}
   background:var(--rojo);transform:rotate(45deg);
 }
 
+/* ---------- beneficios ---------- */
+.beneficios{
+  list-style:none;margin:2.4rem 0 0;padding:0;
+  display:grid;gap:.9rem;counter-reset:b;
+}
+.beneficios li{
+  display:flex;align-items:flex-start;gap:.9rem;
+  background:var(--blanco);border:1px solid #e3dccf;border-radius:var(--radio);
+  padding:1rem 1.1rem;font-size:1.02rem;line-height:1.45;
+}
+.beneficios span{
+  font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--rojo);
+  line-height:1.15;flex:none;
+}
+
 /* ---------- horarios ---------- */
 .horarios{width:100%;border-collapse:collapse;font-family:var(--cond);font-size:1.15rem}
 .horarios th,.horarios td{padding:.85rem .2rem;border-bottom:1px solid rgba(255,255,255,.12);text-align:left}
@@ -346,6 +361,12 @@ p{margin:0 0 1.1em}
 }
 .pie__nav a:hover{color:#fff}
 .pie__legal{font-family:var(--cond);font-size:.92rem;letter-spacing:.05em;color:#8fa0bd;margin:0}
+.pie__redes{display:flex;gap:1.2rem;margin:0}
+.pie__redes a{
+  font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.9rem;
+  color:#c8d3e6;text-decoration:none;border-bottom:1px solid rgba(200,211,230,.35);padding-bottom:2px;
+}
+.pie__redes a:hover{color:#fff;border-color:#fff}
 
 /* ---------- whatsapp flotante ---------- */
 .wa-flotante{
@@ -377,6 +398,7 @@ p{margin:0 0 1.1em}
   .cards{grid-template-columns:repeat(3,1fr)}
   .opiniones{grid-template-columns:repeat(3,1fr)}
   .pasos{grid-template-columns:repeat(3,1fr)}
+  .beneficios{grid-template-columns:repeat(2,1fr);gap:1rem 1.4rem}
   .videos{grid-template-columns:1fr 1fr}
   .galeria{grid-template-columns:repeat(4,1fr)}
   .galeria .g1{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
@@ -385,7 +407,8 @@ p{margin:0 0 1.1em}
   .dos__fotos{grid-template-columns:1fr 1fr}
   .dos__fotos img:first-child{grid-column:span 2;aspect-ratio:4/3}
   .dos__fotos--profe img:first-child{grid-column:span 2;aspect-ratio:4/3}
-  .pie__in{grid-template-columns:auto 1fr auto;text-align:left;align-items:center;justify-items:start}
+  /* marca | redes | nav | datos */
+  .pie__in{grid-template-columns:auto auto 1fr auto;text-align:left;align-items:center;justify-items:start}
   .pie__nav{justify-content:center}
   .pie__legal{text-align:right}
   .mapa iframe{height:420px}
