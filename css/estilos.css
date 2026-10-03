@@ -344,6 +344,7 @@ p{margin:0 0 1.1em}
 }
 .datos a{text-decoration:none}
 .datos a:hover{color:#fff;text-decoration:underline}
+.dato-extra{font-size:.95rem;color:#93a1b8}
 .mapa{border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:1px solid rgba(255,255,255,.12)}
 .mapa iframe{display:block;width:100%;height:320px;border:0;filter:grayscale(.3) contrast(1.05)}
 
@@ -367,6 +368,56 @@ p{margin:0 0 1.1em}
   color:#c8d3e6;text-decoration:none;border-bottom:1px solid rgba(200,211,230,.35);padding-bottom:2px;
 }
 .pie__redes a:hover{color:#fff;border-color:#fff}
+
+/* ---------- paginas de aterrizaje ---------- */
+.landing h1{font-size:clamp(2rem,5.4vw,3.2rem);color:var(--azul);margin-bottom:.35em}
+.landing h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--azul);margin:1.6rem 0 .5rem}
+.landing .entrada{font-size:1.15rem;color:#434a56;max-width:60ch}
+.landing p{max-width:66ch}
+.miga{
+  font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;
+  color:var(--gris);margin-bottom:1.2rem;
+}
+.miga a{color:var(--rojo);text-decoration:none}
+.miga a:hover{text-decoration:underline}
+.miga span{margin:0 .3rem}
+.ctas-landing{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.4rem 0 .4rem}
+.landing__foto{margin:1.6rem 0 .4rem}
+.landing__foto img{width:100%;border-radius:var(--radio);box-shadow:var(--sombra);
+  aspect-ratio:16/10;object-fit:cover}
+.landing .tilde li{color:var(--tinta)}
+
+.caja-cta{
+  background:var(--carbon);color:#e7ecf5;border-radius:var(--radio);
+  padding:1.8rem 1.6rem;margin:2.4rem 0 1.6rem;text-align:center;
+}
+.caja-cta h2{color:#fff;margin:0 0 .4rem}
+.caja-cta p{color:#c3ccdb;margin-inline:auto}
+.caja-cta__dato{
+  font-family:var(--cond);letter-spacing:.06em;font-size:.95rem;color:#93a1b8;margin:1rem 0 0;
+}
+
+.relacionadas ul{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.7rem}
+.relacionadas a{
+  display:block;background:var(--blanco);border:1px solid #e3dccf;border-radius:var(--radio);
+  padding:.9rem 1.1rem;text-decoration:none;transition:border-color .2s ease,transform .2s ease;
+}
+.relacionadas a:hover{border-color:var(--rojo);transform:translateX(3px)}
+.relacionadas strong{display:block;font-family:var(--cond);text-transform:uppercase;
+  letter-spacing:.1em;color:var(--azul);font-size:1.02rem}
+.relacionadas span{font-size:.96rem;color:var(--gris)}
+
+/* bloque de zonas en la home */
+.zonas{list-style:none;margin:2.2rem 0 0;padding:0;display:grid;gap:.8rem}
+.zonas a{
+  display:flex;flex-direction:column;gap:.15rem;background:var(--crema);
+  border:1px solid #e3dccf;border-left:4px solid var(--rojo);border-radius:var(--radio);
+  padding:1rem 1.2rem;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;
+}
+.zonas a:hover{transform:translateY(-2px);box-shadow:var(--sombra)}
+.zonas b{font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:1.05rem;color:var(--azul)}
+.zonas span{font-size:.97rem;color:var(--gris)}
 
 /* ---------- whatsapp flotante ---------- */
 .wa-flotante{
@@ -398,6 +449,8 @@ p{margin:0 0 1.1em}
   .cards{grid-template-columns:repeat(3,1fr)}
   .opiniones{grid-template-columns:repeat(3,1fr)}
   .pasos{grid-template-columns:repeat(3,1fr)}
+  .zonas{grid-template-columns:repeat(3,1fr)}
+  .relacionadas ul{grid-template-columns:repeat(3,1fr)}
   .beneficios{grid-template-columns:repeat(2,1fr);gap:1rem 1.4rem}
   .videos{grid-template-columns:1fr 1fr}
   .galeria{grid-template-columns:repeat(4,1fr)}

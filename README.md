@@ -10,7 +10,13 @@ HTML + CSS + JavaScript vanilla. Sin build, sin dependencias, sin framework.
 Se sirve tal cual está: pensado para Vercel (proyecto estático).
 
 ```
-index.html            página completa
+index.html            home
+boxeo-en-moron.html   landings por búsqueda (las genera _build/construir.py)
+boxeo-en-ituzaingo.html
+boxeo-femenino.html
+boxeo-para-chicos.html
+boxeo-desde-cero.html
+_build/construir.py   generador de las landings + del sitemap
 css/estilos.css       estilos (mobile-first, tokens en :root)
 js/main.js            menú, estado abierto/cerrado, horario de hoy, animaciones
 assets/               logo, favicon, og
@@ -53,6 +59,24 @@ python insumos/procesar-fotos.py
 
 **Pendiente:** conseguir el logo en alta (hoy sale del avatar de Instagram, 150 px
 escalado) y fotos propias del gimnasio.
+
+## SEO
+
+El sitio apunta a las búsquedas de boxeo de Castelar, Morón e Ituzaingó con una página por
+intención. La estrategia, las búsquedas reales relevadas y lo que falta (Google Business Profile,
+reseñas, dominio) están en `insumos/SEO.md` (no se publica).
+
+Las landings **se generan**, no se editan a mano:
+
+```bash
+python _build/construir.py
+```
+
+El script lee el header y el pie de `index.html`, así que si cambia el menú alcanza con volver a
+correrlo. También reescribe `sitemap.xml`.
+
+> Al cambiar de dominio: tocar `SITIO` en `_build/construir.py`, correr el script y reemplazar
+> `dani-box.vercel.app` en `index.html` (canonical, Open Graph y schema).
 
 ## Deploy
 
